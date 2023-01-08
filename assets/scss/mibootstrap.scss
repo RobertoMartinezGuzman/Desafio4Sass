@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+//Fuente
+$font-family-base: 'Oswald', sans-serif;
+
+// scss-docs-start theme-color-variables
+$primary:       #9BC1BC !default;
+$secondary:     #525558 !default;
+$personal:      #FF9800 !default;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "personal":   $personal,
+) !default;
+// scss-docs-end theme-colors-map
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: $primary;
+  background-color: $secondary;
+
+    h1 {
+      font-size: 50px;
+    }
+}
+
+.navbar {
+  @extend .header;
+  gap: 10px;
+
+  a {
+    text-decoration: none;
+    font-size: 20px;
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0px;
+}
+
+.card-body {
+    background-color: $secondary;
+    color: $primary;
+    text-align: center;
+}
+
+.btn {
+  background-color: $personal;
+  border-color: $secondary;
+}
+
+.footer {
+  @extend .card-body;
+  margin-top: 4rem;
+  padding: 1rem;
+}
+
